@@ -4,7 +4,7 @@
   "type" : "page",
   "uuid" : "1fe02ab9-8266-446c-9e17-f742987e51ec",
   "modelVersion" : "2.4",
-  "lastUpdate" : 1685978148556,
+  "lastUpdate" : 1685996487607,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -51,6 +51,156 @@
       {
         "type" : "container",
         "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "fce8d3b0-6de8-411a-acea-4228b8c21fed",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "ff344406-1a71-45bd-929f-3555abaa9f12",
+              "hasValidationError" : false,
+              "id" : "nuevaSolicitudVacacionesFragmento",
+              "binding" : {
+                "dataExt" : "nuevaSolicitudVacaciones"
+              }
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Crear una nueva solicitud"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "POST"
+                },
+                "assign" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "url" : {
+                  "type" : "interpolation",
+                  "value" : "../API/bpm/process/{{informacionDefinicionProceso[0].id}}/instantiation"
+                },
+                "responseStatusCode" : {
+                  "type" : "variable"
+                },
+                "dataToSend" : {
+                  "type" : "expression",
+                  "value" : "nuevaSolicitudDeVacaciones"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable",
+                  "value" : "/bonita/apps/solicitud-vacaciones"
+                },
+                "closeOnSuccess" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "dataFromError" : {
+                  "type" : "variable"
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "modalId" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "5fe9e715-b2cb-43eb-88e0-8fe17172a947",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
           "md" : 12,
           "sm" : 12,
           "xs" : 12,
@@ -80,12 +230,9 @@
         "rows" : [
           [
             {
-              "type" : "component",
+              "type" : "container",
               "dimension" : {
-                "xs" : 12,
-                "sm" : 12,
-                "md" : 12,
-                "lg" : 12
+                "xs" : 12
               },
               "propertyValues" : {
                 "cssClasses" : {
@@ -96,70 +243,10 @@
                   "type" : "constant",
                   "value" : false
                 },
-                "allowHTML" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "text" : {
-                  "type" : "interpolation",
-                  "value" : "Crear una nueva solicitud"
-                },
-                "type" : {
-                  "type" : "constant",
-                  "value" : "process"
-                },
-                "targetUrl" : {
-                  "type" : "constant",
-                  "value" : "http://"
-                },
-                "pageToken" : {
-                  "type" : "constant"
-                },
-                "processName" : {
-                  "type" : "constant",
-                  "value" : "SolicitudVacaciones"
-                },
-                "processVersion" : {
-                  "type" : "constant",
-                  "value" : "6.0.0"
-                },
-                "taskId" : {
-                  "type" : "constant"
-                },
-                "caseId" : {
-                  "type" : "constant"
-                },
-                "target" : {
-                  "type" : "constant",
-                  "value" : "_self"
-                },
-                "appToken" : {
-                  "type" : "constant"
-                },
-                "urlParams" : {
-                  "type" : "constant"
-                },
-                "alignment" : {
-                  "type" : "constant",
-                  "value" : "center"
-                },
-                "buttonStyle" : {
-                  "type" : "constant",
-                  "value" : "primary"
+                "repeatedCollection" : {
+                  "type" : "variable"
                 }
               },
-              "reference" : "5fba6e85-14d6-42f3-9181-739173bac9a7",
-              "hasValidationError" : false,
-              "id" : "pbLink"
-            }
-          ],
-          [
-            {
-              "type" : "container",
-              "dimension" : {
-                "xs" : 12
-              },
-              "propertyValues" : { },
               "reference" : "c594ee7a-f8b0-4311-89c1-aa7d4bf750a2",
               "hasValidationError" : false,
               "id" : "pbContainer",
@@ -225,7 +312,7 @@
                         "value" : [
                           "Fecha de inicio",
                           "Número de días",
-                          "Esta Aprobado"
+                          "Estado"
                         ]
                       },
                       "allowHtml" : {
@@ -260,7 +347,7 @@
                         "value" : [
                           "fechaInicio",
                           "numeroDias",
-                          "estaAprobado"
+                          "estaAprobadoEtiqueta"
                         ]
                       },
                       "dimension" : {
@@ -592,6 +679,46 @@
       "type" : "constant",
       "value" : [
         ""
+      ],
+      "exposed" : false
+    },
+    "sessionInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/unusedId"
+      ],
+      "exposed" : false
+    },
+    "agregarEtiquetaEstadoSolicitud" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.hasOwnProperty('solicitudVacaciones') && $data.solicitudVacaciones) {\r",
+        "for (let solicitud of $data.solicitudVacaciones) {\r",
+        "  if(solicitud.estaAprobado)  {\r",
+        "    solicitud.estaAprobadoEtiqueta = \"Aprobada\";\r",
+        "  } else if(solicitud.estaAprobado === false) {\r",
+        "    solicitud.estaAprobadoEtiqueta = \"Rechazada\";\r",
+        "  } else {\r",
+        "    solicitud.estaAprobadoEtiqueta = \"En curso\";\r",
+        "  }\r",
+        "}\r",
+        "}\r",
+        "\r",
+        "return $data.solicitudVacaciones;"
+      ],
+      "exposed" : false
+    },
+    "nuevaSolicitudDeVacaciones" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "informacionDefinicionProceso" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?p=0&c=10&f=name=SolicitudVacaciones&o=version%20desc"
       ],
       "exposed" : false
     }
